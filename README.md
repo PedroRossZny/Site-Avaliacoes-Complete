@@ -32,34 +32,33 @@ A aplicacao permite votar por estrelas, consultar um ranking por media de avalia
 
 ```text
 .
-+-- site-avaliacoes-main/
-    +-- server/
-    |   +-- controllers/
-    |   |   +-- commentController.js
-    |   |   +-- reviewController.js
-    |   +-- models/
-    |   |   +-- Comment.js
-    |   |   +-- Review.js
-    |   +-- public/
-    |   |   +-- assets/
-    |   |   +-- css/
-    |   |   +-- js/
-    |   |   +-- index.html
-    |   |   +-- vote.html
-    |   |   +-- rank.html
-    |   |   +-- carrossel.html
-    |   |   +-- estabelecimento1.html ... estabelecimento7.html
-    |   +-- routes/
-    |   |   +-- commentRoutes.js
-    |   |   +-- index.js
-    |   |   +-- reviewRoutes.js
-    |   +-- utils/
-    |   |   +-- db.js
-    |   +-- index.js
-    +-- .gitignore
-    +-- package.json
-    +-- package-lock.json
-    +-- README.md
++-- server/
+|   +-- controllers/
+|   |   +-- commentController.js
+|   |   +-- reviewController.js
+|   +-- models/
+|   |   +-- Comment.js
+|   |   +-- Review.js
+|   +-- public/
+|   |   +-- assets/
+|   |   +-- css/
+|   |   +-- js/
+|   |   +-- index.html
+|   |   +-- vote.html
+|   |   +-- rank.html
+|   |   +-- carrossel.html
+|   |   +-- estabelecimento1.html ... estabelecimento7.html
+|   +-- routes/
+|   |   +-- commentRoutes.js
+|   |   +-- index.js
+|   |   +-- reviewRoutes.js
+|   +-- utils/
+|   |   +-- db.js
+|   +-- index.js
++-- .gitignore
++-- package.json
++-- package-lock.json
++-- README.md
 ```
 
 ## Como executar localmente
@@ -75,7 +74,7 @@ Clone o repositorio e acesse a pasta da aplicacao:
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
-cd Site-Avaliacoes-Complete/site-avaliacoes-main
+cd Site-Avaliacoes-Complete
 ```
 
 Instale as dependencias:
@@ -192,7 +191,7 @@ O projeto usa SQLite com Sequelize. Ao iniciar o servidor, as tabelas sao sincro
 O arquivo do banco e criado em:
 
 ```text
-site-avaliacoes-main/database.sqlite
+database.sqlite
 ```
 
 Esse arquivo esta no `.gitignore`, junto com `node_modules/` e `.env`, para evitar versionar dados locais e dependencias instaladas.
