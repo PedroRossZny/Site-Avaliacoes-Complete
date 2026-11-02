@@ -43,7 +43,6 @@ const places = [
                   -----------------------------------------\n
                   -----------------------------------------`},
 
-  // ✅ adicionado para casar com carrossel e páginas de comentários
   { id: 7, name: "Estabelecimento 7", image: "assets/estab 7.jpeg",
     description: `-----------------------------------------\n
                   -----------------------------------------\n
