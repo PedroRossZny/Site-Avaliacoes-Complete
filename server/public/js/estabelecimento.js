@@ -134,7 +134,7 @@ function renderComments() {
     replyForm.className = 'form-resposta';
     replyForm.style.display = 'none';
     replyForm.innerHTML = `
-      <textarea placeholder="Escreva uma resposta..." required></textarea>
+      <textarea placeholder="Escreva uma resposta..." required maxlength="1000"></textarea>
       <button type="submit">Enviar</button>
     `;
     btnReply.addEventListener('click', () => {
