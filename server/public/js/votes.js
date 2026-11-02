@@ -45,10 +45,9 @@ function renderList(filtered = establishments) {
 
       (async () => {
         try {
-          const resVotes = await fetch(`/api/reviews?placeId=${est.id}`);
+          const resVotes = await fetch(`/api/reviews?placeId=${est.id}&anonId=${encodeURIComponent(getAnonId())}`);
           if (!resVotes.ok) return;
-          const votesList = await resVotes.json();
-          const mine = votesList.find(v => v.anonId === getAnonId());
+          const [mine] = await resVotes.json();
           if (mine) {
             stars.forEach((s,i) => s.classList.toggle('active', i < mine.rating));
             container.dataset.reviewId = mine.id;
