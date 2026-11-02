@@ -7,18 +7,17 @@ import "./models/Review.js";
 import "./models/Comment.js";
 
 import routes from "./routes/index.js";
-import commentRoutes from "./routes/commentRoutes.js";
-import reviewRoutes from "./routes/reviewRoutes.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const PORT = process.env.PORT || 3000;
 
 const app = express();
-app.use(express.json());
+app.disable("x-powered-by");
+app.use(express.json({ limit: "20kb" }));
 
-app.use("/api", routes);                 
-app.use("/api/comments", commentRoutes); 
-app.use("/api/reviews", reviewRoutes);   
+// routes/index.js mounts /api/reviews and /api/comments.
+app.use("/api", routes);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.get("*", (req, res) => {
@@ -28,11 +27,11 @@ app.get("*", (req, res) => {
 async function startServer() {
   try {
     await sequelize.sync();
-    app.listen(3000, () => {
-      console.log("🚀 Servidor rodando em http://localhost:3000");
+    app.listen(PORT, () => {
+      console.log(`Server running at http://localhost:${PORT}`);
     });
   } catch (error) {
-    console.error("❌ Erro ao sincronizar banco:", error);
+    console.error("Could not sync the database:", error);
   }
 }
 
