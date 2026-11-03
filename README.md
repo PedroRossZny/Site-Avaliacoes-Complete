@@ -14,6 +14,10 @@ The interface is in Brazilian Portuguese.
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=black)
 
+## Demo video
+
+[![Avalia Aqui demo on YouTube](https://img.youtube.com/vi/7NlSEaWKleI/hqdefault.jpg)](https://youtu.be/7NlSEaWKleI)
+
 ## Screenshots
 
 Captured from the app running locally, with sample votes and comments added through the API.
